@@ -1,5 +1,9 @@
 #include <Windows.h>
 #include <stdio.h>
+#include <string>
+#include "Label.h"
+
+using namespace std;
 
 int main(void) {
 
@@ -20,7 +24,8 @@ int main(void) {
 	DWORD wAttr = FOREGROUND_GREEN | FOREGROUND_RED | FOREGROUND_INTENSITY;
 	SetConsoleTextAttribute(h, wAttr);
 
-	printf("Label");
+	string label = "Some Label";
+	myLabel.createLabel(label);
 
 	CONSOLE_SCREEN_BUFFER_INFO cbi;
 
